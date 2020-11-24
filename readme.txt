@@ -19,21 +19,21 @@ Create the main.js file:
 >node main.js - lance the web server on port 4000 then go to: http://localhost:4000/
 
 4. Configuring and Connecting to the database
->mkdir -p api\db
->cd api\db
+>mkdir -p src\api\db
+>cd src\api\db
 Create a config file: database.config.js with:
 module.exports = {
     url: 'mongodb://localhost:27017/ClientDb'
 }
 
 5. Defining the Client model in Mongoose
-In api\db create a model file called client.model.js
+In src\api\db create a model file called client.model.js
 
 6. Defining Routes using Express
-In api\db create a route file called client.routes.js
+In src\api\db create a route file called client.routes.js
  
 7. Developing the Restful APIs
-In api\db create a controller file client.controller.js
+In src\api\db create a controller file client.controller.js
 
 REST Api:
 http://localhost:4000/clients                                  HTTP GET - all clients
@@ -56,6 +56,6 @@ Robo 3T 1.3 (old Robomongo), then make a MongoDB connection at localhist:27017
 For a fake Json server based on json file we cand install json-server
 >npm install json-server
 Start JSON Server with json file as input:
->json-server --watch api\json\clients.json --port 3001 then go to http://localhost:3001/clients
+>json-server --watch src\api\json\clients.json --port 3001 then go to http://localhost:3001/clients
 
 
