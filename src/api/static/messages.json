@@ -1,0 +1,69 @@
+{
+"liste" : { 
+ "actions" : {
+   "titre" : "Action",
+   "consulter" : "Consulter",
+   "modifier" : "Modifier",
+   "supprimer" : "Supprimer",
+   "filtrerParPrenom" : "Filtrer par prénom: ",
+   "filtreListe" : "Filtre appliqué à la liste: ",
+
+   "consulterTitle" : "Consulter cet client",
+   "modifierTitle" : "Modifier cet client",
+   "supprimerTitle" : "Supprimer cet client"
+  },
+ "clients" : {
+   "react" : {
+    "titre" : "Liste des Clients (version ReactJS)"
+   }
+  }
+ },
+"fiche" : {
+  "boutons" : {
+     "annuler" : "Annuler",
+     "creer" : "Créer",
+     "valider" : "Valider",
+     "supprimer" : "Supprimer",
+
+     "annulerTitle" : "Annuler la saisie du client",
+     "creerTitle" : "Créer un nouveau client",
+     "validerTitle" : "Valider et enregistrer les données du client",
+     "validerDisabledTitle" : "Desactivé si données invalides",
+     "supprimerTitle" : "Supprimer le client",
+     "supprimerConfirm" : "Voulez-vous supprimer le client "
+   },
+  "client" : {
+    "titres" : {
+      "modification" : "Modification du Client: ",
+      "creation" : "Création d'un Client ",
+      "consultation" : "Consultation du Client: "
+    },
+    "nom" : "Nom :",
+    "nomPlaceHolder" : "Veuillez saisier le nom",
+    "prenom" :"Prénom :",
+    "prenomPlaceHolder" : "Veuillez saisier le prénom",
+    "validation" : {
+      "nom" : {
+        "required" : "Le nom est obligatoire.",
+        "minlength" : "Le nom doit contenir au moins 3 caracteres.",
+        "maxlength" : "Le nom ne doit pas depasser 50 caracteres."
+      },
+      "prenom" : {
+        "required" : "Le prénom est obligatoire.",
+        "minlength" : "Le prénom doit contenir au moins 3 caracteres.",
+        "maxlength" : "Le prénom ne doit pas depasser 50 caracteres."
+      } 
+    }  
+  }
+ },
+ "api" : {
+    "errors" : {
+      "clientNotFoundError" : "On n'a pas trouvé le client avec l'id ",
+      "findAllError"  : "Erreur survenue à la reception des clients. ",
+      "findByIdError" : "Erreur survenue à la reception du client avec id ",
+      "createError"   : "Erreur survenue à la creation du client.",
+      "updateError"   : "Erreur survenue à la modification du client avec id ",
+      "deleteError"   : "Erreur survenue à la suppression du client avec id "
+    }
+ }
+}  
