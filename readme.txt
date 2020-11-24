@@ -36,12 +36,10 @@ In src\api\db create a route file called client.routes.js
 In src\api\db create a controller file client.controller.js
 
 REST Api:
-http://localhost:4000/clients                                  HTTP GET - all clients
-http://localhost:4000/clients/new                              HTTP GET  - show creation window
+http://localhost:4000/clients                                  HTTP GET  - all clients
 http://localhost:4000/clients/new                              HTTP POST - save created client and show the list of clients
-http://localhost:4000/clients/5e6227ec915dde0810d395c6         HTTP GET - consult single client
-http://localhost:4000/clients/5e6227ec915dde0810d395c6/edit    HTTP GET   - show modification window
-http://localhost:4000/clients/5e6227ec915dde0810d395c6/edit    HTTP POST  - save modificated client and show the list of clients
+http://localhost:4000/clients/5e6227ec915dde0810d395c6         HTTP GET  - consult single client
+http://localhost:4000/clients/5e6227ec915dde0810d395c6/edit    HTTP POST - save modificated client and show the list of clients
 http://localhost:4000/clients/5e6227ec915dde0810d395c6/delete  HTTP GET  - delete selected client and show the remaining list of clients
 
 MongoDB database:
