@@ -1,0 +1,44 @@
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title><%- title %></title>
+      <link rel="stylesheet" href="/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/css/styles.css">
+      <script type="text/javascript" src="/js/app.js"></script>
+  </head>
+  <body>
+      <div class="container">
+          <!--flashed messages-->
+            <div id="messages">
+                <% Object.keys(messages).forEach(function (type, index) { %>
+                    <div id="message<%= index + 1 %>">
+                        <% if(type == 'error') { %>
+                           <div class="alert alert-danger alert-dismissible" >
+                        <% } else if(type == 'warning') { %> 
+                            <div class="alert alert-warning alert-dismissible"> 
+                        <% } else if(type == 'success') { %> 
+                            <div class="alert alert-success alert-dismissible">   
+                        <% } else { %> 
+                            <div class="alert"></div>  
+                        <% } %>
+                            <button class="close" data-target="message<%= index + 1 %>" data-dismiss="alert" aria-label="delete">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <% messages[type].forEach(function (message) { %>
+                                <%= message %>
+                            <% }) %>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+          <!--flashed messages-->
+      </div>
+
+      <section class="section">
+          <div class="container">
+              <div><%- content %></div>
+          </div>
+      </section>
+  </body>
+</html>

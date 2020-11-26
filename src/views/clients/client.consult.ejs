@@ -1,0 +1,39 @@
+
+<title><%- contentFor('title') %> <%= msg.fiche.client.titres.consultation + client.prenom + ' ' + client.nom %></title>
+
+<%- contentFor('content') %>
+<div class='card'>
+     
+   <div class='card-header'>
+    <h4><%= msg.fiche.client.titres.consultation + client.prenom + ' ' + client.nom %></h4>
+  </div>
+
+  
+  <div class='card-body'>
+    <div class='row'>
+      <div class='col-md-2'><%= msg.fiche.client.nom %></div>
+      <div class='col-md-4'><%= client.nom %></div>
+    </div>
+    <div class='row'>
+      <div class='col-md-2'><%= msg.fiche.client.prenom %></div>
+      <div class='col-md-4'><%= client.prenom %> </div>
+    </div>
+  </div>
+
+  <div class='card-footer'>
+    <button class='btn btn-outline-secondary'
+            title="<%= msg.fiche.boutons.annulerTitle %>"
+            style='width:100px'>
+      <i class='fa fa-chevron-left'></i>
+      <a href="/client" class="button is-text"><%= msg.fiche.boutons.annuler %></a>
+    </button>
+
+    <button class="btn btn-outline-primary"
+          style="width:100px"
+          title="<%= msg.liste.actions.modifierTitle %>">
+      <a  href="/client/<%= client.id %>/edit"><%= msg.liste.actions.modifier %></a>
+    </button>
+  </div>  
+
+
+</div>

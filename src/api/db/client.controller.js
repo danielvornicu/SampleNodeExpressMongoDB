@@ -1,5 +1,5 @@
 const Client = require('../db/client.model.js');
-const messages = require('../static/messages.json'); 
+const messages = require('../../static/messages.json'); 
 
 //ClientService function version
 //const clientService = require('../db/client.service.func.js');  

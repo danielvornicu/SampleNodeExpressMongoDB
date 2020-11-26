@@ -56,4 +56,24 @@ For a fake Json server based on json file we cand install json-server
 Start JSON Server with json file as input:
 >json-server --watch src\api\json\clients.json --port 3001 then go to http://localhost:3001/clients
 
+To create a Web Client(Template EJS=Embedded JavaScript) for REST API:
+Git new branch and switch to it:
+git branch node-express-mongodb+client 
+git checkout node-express-mongodb+client
+Install dependencies: ejs, express-ejs-layouts (we don't install bootstrap font-awesome but we use them in html)
+express-ejs-layouts - extends ejs for layout support(base template with children)
+>npm install ejs express-ejs-layouts  --save (--save no longer necessary since NPM version 5)
+
+Express-flash to use flash messages with express, you may need: express-session and cookie-parser
+npm install express-flash express-session cookie-parser --save
+
+A simple client for REST api in HTML with EJS Template:
+http://localhost:4000/client                                           HTTP GET         - get all clients
+http://localhost:4000/client/new                                       HTTP GET/POST    - create client
+http://localhost:4000/client/5fbbbf60915dde3190f5e2ed                  HTTP GET         - consult client
+http://localhost:4000/client/5fbbbf60915dde3190f5e2ed/edit             HTTP GET/POST    - edit client
+http://localhost:4000/client/5fbbbf60915dde3190f5e2ed/delete           HTTP GET or HTTP DELETE for InMemoryWebApiModule  - delete client
+
+http://localhost:4000/welcome - test page
+
 

@@ -1,0 +1,57 @@
+<title><%- contentFor('title') %> <%= msg.liste.clients.ejs.titre %></title>
+  
+<%- contentFor('content') %>
+<div class='card' >
+    <div class='card-header'>
+        <div class="row">
+            <div class="col-md-12">
+                <h1><%= msg.liste.clients.ejs.titre %></h1> 
+            </div>
+        </div>
+    </div>
+
+    <div class='card-body'>
+        <div class='table-responsive'>
+            <table class='table table-bordered table-striped table-responsive-md'>
+                <thead>
+                <tr>
+                    <th><%= msg.fiche.client.nom %></th>
+                    <th><%= msg.fiche.client.prenom %></th>
+                    <th><%= msg.liste.actions.titre %></th>
+                </tr>
+                </thead>
+
+                <tbody>
+                    <% for (const client of clients) { %>
+                    <tr>
+                        <td><%= client.nom %></td>
+                        <td><%= client.prenom %></td>
+                         <td>
+                            <a href="/client/<%= client.id %>"
+                                title="<%= msg.liste.actions.consulterTitle %>"
+                                class="btn btn-outline-primary btn-sm"><%= msg.liste.actions.consulter %></a>
+                            |
+                            <a  href="/client/<%= client.id %>/edit"                              
+                                title="<%= msg.liste.actions.modifierTitle %>"
+                                class="btn btn-outline-primary btn-sm"><%= msg.liste.actions.modifier %></a>
+                            |
+                            <a  href="/client/<%= client.id %>/delete"                                   
+                                title="<%= msg.liste.actions.supprimerTitle %>"
+                                class="btn btn-outline-danger btn-sm"
+                                id="boutonSupprimer"><%= msg.liste.actions.supprimer %></a>
+                        </td> 
+                    </tr>
+                    <% } %>
+                </tbody> 
+            </table>
+        </div>
+
+        <div class="panel">
+            <a href="/client/new"                   
+                title="<%= msg.fiche.boutons.creerTitle %>"
+                class="btn btn btn-outline-primary btn-sm" ><%= msg.fiche.boutons.creer %></a>
+        </div> 
+    </div>
+</div> 
+
+

@@ -10,11 +10,15 @@
 
    "consulterTitle" : "Consulter cet client",
    "modifierTitle" : "Modifier cet client",
-   "supprimerTitle" : "Supprimer cet client"
+   "supprimerTitle" : "Supprimer cet client",
+
+   "creerSucces" : "Le client a été crée avec success: ",
+   "modifierSucces" : "Le client a été modifié avec success: ",
+   "supprimerSucces": "Le client a été supprimé avec success."
   },
  "clients" : {
-   "react" : {
-    "titre" : "Liste des Clients (version ReactJS)"
+   "ejs" : {
+    "titre" : "Liste des Clients (version Express +  EJS)"
    }
   }
  },
