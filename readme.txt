@@ -76,4 +76,7 @@ http://localhost:4000/client/5fbbbf60915dde3190f5e2ed/delete           HTTP GET 
 
 http://localhost:4000/welcome - test page
 
+We can use a PostgreSQL database in a cloud:
+https://www.elephantsql.com/
+
 
